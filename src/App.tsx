@@ -1,12 +1,10 @@
 import {
-  Routes,
-  Route,
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Playlist from "./pages/Playlist";
-import SpotifyClone from "./pages/SpotifyClone";
 import { useEffect } from "react";
+import Router from "./routers";
+
 
 function App() {
   const action = useNavigationType();
@@ -49,10 +47,7 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Playlist />} />
-      <Route path="/spotify-clone" element={<SpotifyClone />} />
-    </Routes>
+    <Router/>
   );
 }
 export default App;
