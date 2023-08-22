@@ -2,13 +2,13 @@ export interface ICategory {
   _id: string;
   key: string;
   name: string,
-  products: Product[],
+  products: products[],
   createdAt?: Date;
   updatedAt?: Date;
   deletedAt?: Date | null,
 }
 
-export interface Product {
+export interface products {
   _id: string;
   key: string;
   name: string;
@@ -16,7 +16,7 @@ export interface Product {
   salePrice: number;
   images: string[];
   description: string;
-  sizes: Sizes[];
+  sizes: sizes[];
   quantity: number;
   views: number;
   tags: Tag[];
@@ -26,7 +26,7 @@ export interface Product {
   deletedAt?: Date | null,
 }
 
-interface Sizes {
+interface sizes {
   size: number;
   quantity: number;
 }

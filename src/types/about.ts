@@ -1,4 +1,4 @@
-interface IAbout {
+export default interface IAbout {
     _id: string;
     key: string;
     name: string,
@@ -12,4 +12,9 @@ interface IAbout {
     updatedAt?: Date;
     deletedAt?: Date | null,
 }
-export default IAbout
+
+export interface ResponseAbout {
+    message: string,
+    data:IAbout[],
+    error:string
+}

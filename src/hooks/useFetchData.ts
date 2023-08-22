@@ -13,14 +13,13 @@ intansce.interceptors.request.use(function (config) {
 });
 
 intansce.interceptors.response.use(function (response) {
-
     return response.data;
 }, function (error) {
     return Promise.reject(error);
 });
 
 const useFetchData = (url: string) => {
-    const [data, setData] = useState<any>([]);
+    const [data, setData] = useState<Response[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {

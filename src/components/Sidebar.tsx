@@ -41,10 +41,10 @@ const Sidebar = () => {
                 <li className="flex flex-row items-center justify-start gap-15">
                     <Link to="/spotify" className="text-white">Your Library</Link>
                 </li>
-                <li className="flex flex-row items-center justify-start gap-15">
+                <li className="flex flex-row items-center justify-start gap-15 no-underline">
                     <Link to="/signin" className="text-white">signin</Link>
                 </li>
-                <li className="flex flex-row items-center justify-start gap-15">
+                <li className="flex flex-row items-center justify-start gap-15 no-underline">
                     <Link to="/signup" className="text-white">signup</Link>
                 </li>
                 <div className="flex flex-row items-center justify-start gap-[15px]">

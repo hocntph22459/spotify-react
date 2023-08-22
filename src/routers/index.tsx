@@ -7,15 +7,16 @@ import SignupPage from "../pages/client/signup/SignupPage"
 import NotFoundPage from "../pages/client/404"
 const Router = () => {
     return (
-        <Routes>
-            <Route path='' element={<LayoutClient />}>
-                <Route index element={<PlaylistPage />} />
-                <Route path='spotify'>
-                    <Route index element={<SpotifyPage />} />
-                    <Route path=':id' />
+        <BrowserRouter>
+            <Routes>
+                <Route path='' element={<LayoutClient />}>
+                    <Route index element={<PlaylistPage />} />
+                    <Route path='spotify'>
+                        <Route index element={<SpotifyPage />} />
+                        <Route path=':id' />
+                    </Route>
                 </Route>
-            </Route>
-            {/* <Route path='admin' element={<LayoutAdmin />}>
+                {/* <Route path='admin' element={<LayoutAdmin />}>
                     <Route index element={<Management />} />
                     <Route path='products'>
                         <Route index element={<ManagementProduct />} />
@@ -47,10 +48,11 @@ const Router = () => {
                         <Route index element={<ManageUser />} />
                     </Route>
                 </Route> */}
-            <Route path='signin' element={<SigninPage />}></Route>
-            <Route path='signup' element={<SignupPage />}></Route>
-            <Route path='*' element={<NotFoundPage />}></Route>
-        </Routes>
+                <Route path='signin' element={<SigninPage />}></Route>
+                <Route path='signup' element={<SignupPage />}></Route>
+                <Route path='*' element={<NotFoundPage />}></Route>
+            </Routes>
+        </BrowserRouter>
     )
 }
 export default Router
