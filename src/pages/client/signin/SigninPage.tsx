@@ -141,13 +141,12 @@ const SigninPage = () => {
             </MyFormItem>
             <Button
                 htmlType="submit"
-                className="w-full h-[52px] text-center py-3 rounded bg-[#4a71c4] text-white hover:bg-green-dark focus:outline-none my-1"
+                className="w-full h-[52px] text-center py-3 bg-[black] rounded-lg text-white hover:bg-green-dark focus:outline-none my-1"
             >
                 Sign in
             </Button>
         </Form>
         </section>
-
     );
 }
 

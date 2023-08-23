@@ -1,47 +1,47 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { IProduct } from "../types/product"
 export const filmAPI = createApi({
-    reducerPath: "product",
+    reducerPath: "film",
     baseQuery: fetchBaseQuery({
         baseUrl: "http://localhost:3000/",
     }),
-    tagTypes: ["product"],
+    tagTypes: ["film"],
     endpoints: (buidler) => ({
         getfilms: buidler.query<IProduct[], void>({
-            query: () => `products`,
-            providesTags: ["product"]
+            query: () => `films`,
+            providesTags: ["film"]
         }),
         getfilmByid: buidler.query<IProduct, number>({
-            query: (id) => `products/${id}`
+            query: (id) => `films/${id}`
         }),
         createFilm: buidler.mutation<IProduct, IProduct>({
             query: (product) => {
                 return {
-                    url: "products",
+                    url: "films",
                     method: "POST",
                     body: product
                 }
             },
-            invalidatesTags: ["product"]
+            invalidatesTags: ["film"]
         }),
         updateFilm: buidler.mutation<IProduct, IProduct>({
             query: (product) => {
                 return {
-                    url: `products/${product._id}`,
+                    url: `films/${product._id}`,
                     method: "PUT",
                     body: product
                 }
             },
-            invalidatesTags: ["product"]
+            invalidatesTags: ["film"]
         }),
         removeFilm: buidler.mutation<number, number>({
             query: (id) => {
                 return {
-                    url: `products/${id}`,
+                    url: `films/${id}`,
                     method: "DELETE",
                 }
             },
-            invalidatesTags: ["product"]
+            invalidatesTags: ["film"]
         })
     })
 })
